@@ -18,9 +18,6 @@
       "llj2003.morehuds.client.MoreHudsClient"
     ]
   },
-  "mixins": [
-    "morehuds.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.14.0",
     "fabric": "*",
