@@ -1,0 +1,10 @@
+{
+  "key.morehuds.visibility": "显示/隐藏扩展界面",
+  "category.morehuds.base": "MoreHuds基本展示",
+  "string.morehuds.name": "名称",
+  "string.morehuds.health": "血量",
+  "string.morehuds.no_target": "没有目标",
+  "string.morehuds.game_tick": "游戏刻数",
+  "string.morehuds.game_time": "游戏内时间",
+  "string.morehuds.time": "时间"
+}

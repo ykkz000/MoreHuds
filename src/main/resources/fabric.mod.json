@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "morehuds",
+  "version": "${version}",
+  "name": "MoreHuds",
+  "description": "Display more huds in Minecraft to show more information",
+  "authors": [
+    "llj2003"
+  ],
+  "contact": {
+    "website": "https://gitee.com/llj2003/MoreHuds"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/morehuds/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "llj2003.morehuds.client.MoreHudsClient"
+    ]
+  },
+  "mixins": [
+    "morehuds.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "1.19.x",
+    "hud-api": "*"
+  }
+}

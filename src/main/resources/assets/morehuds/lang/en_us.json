@@ -1,0 +1,10 @@
+{
+  "key.morehuds.visibility": "Extended Hud Show/Hide",
+  "category.morehuds.base": "MoreHuds MOD Display Base",
+  "string.morehuds.name": "Name",
+  "string.morehuds.health": "Health",
+  "string.morehuds.no_target": "No target",
+  "string.morehuds.game_tick": "Game Tick",
+  "string.morehuds.game_time": "Game Time",
+  "string.morehuds.time": "Time"
+}
