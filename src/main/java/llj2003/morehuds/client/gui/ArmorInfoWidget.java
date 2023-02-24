@@ -22,17 +22,12 @@ public class ArmorInfoWidget extends Panel {
         }
     }
     public void setArmorItems(Iterable<ItemStack> itemStack) {
-        int i = 0;
+        int i = itemInfoWidget.length - 1;
         if (itemStack != null) {
             for (ItemStack itemStack1 : itemStack) {
-                if (i < itemInfoWidget.length) {
-                    itemInfoWidget[i].setItem(itemStack1);
-                }
-                i++;
+                itemInfoWidget[i].setItem(itemStack1);
+                i--;
             }
-        }
-        for (; i < itemInfoWidget.length; i++) {
-            itemInfoWidget[i].setItem(null);
         }
     }
     public static Region getPreferredRegion() {

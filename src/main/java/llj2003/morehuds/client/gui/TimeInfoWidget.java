@@ -1,5 +1,6 @@
 package llj2003.morehuds.client.gui;
 
+import llj2003.hudapi.HudApiMain;
 import llj2003.hudapi.gui.Color;
 import llj2003.hudapi.gui.widget.Label;
 import llj2003.hudapi.gui.widget.Panel;
@@ -30,8 +31,8 @@ public class TimeInfoWidget extends Panel {
 
     @Override
     public void render(MatrixStack matrixStack) {
-        if (getClient() != null && getClient().world != null) {
-            ClientWorld clientWorld = getClient().world;
+        if (HudApiMain.client != null && HudApiMain.client.world != null) {
+            ClientWorld clientWorld = HudApiMain.client.world;
             tickInfo.setString(String.format("%s: %d", IdTranslator.translateString("game_tick"), clientWorld.getTime()));
             minecraftTimeInfo.setString(String.format("%s: %02d:%02d",
                     IdTranslator.translateString("game_time"),
