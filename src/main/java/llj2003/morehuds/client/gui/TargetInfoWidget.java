@@ -1,5 +1,6 @@
 package llj2003.morehuds.client.gui;
 
+import llj2003.hudapi.HudApiMain;
 import llj2003.hudapi.gui.Color;
 import llj2003.hudapi.gui.widget.ProgressBar;
 import llj2003.hudapi.gui.widget.Label;
@@ -34,13 +35,13 @@ public class TargetInfoWidget extends Panel {
         add(healthInfoBar);
     }
     public void setTarget(HitResult hitResult) {
-        if (getClient() == null || getClient().world == null) {
+        if (HudApiMain.client == null || HudApiMain.client.world == null) {
             return;
         }
         switch (hitResult.getType()) {
             case BLOCK -> {
                 BlockHitResult blockHitResult = (BlockHitResult) hitResult;
-                Block block = getClient().world.getBlockState(blockHitResult.getBlockPos()).getBlock();
+                Block block = HudApiMain.client.world.getBlockState(blockHitResult.getBlockPos()).getBlock();
                 nameLabel.setString(String.format("%s: %s",
                         IdTranslator.translateString("name"), block.getName().getString()));
                 healthInfoLabel.setVisible(false);

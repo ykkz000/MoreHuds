@@ -1,5 +1,6 @@
 package llj2003.morehuds.client.gui;
 
+import llj2003.hudapi.HudApiMain;
 import llj2003.hudapi.gui.widget.Panel;
 import llj2003.hudapi.util.Region;
 import net.fabricmc.api.EnvType;
@@ -23,7 +24,7 @@ public class ExtendHudsWidget extends Panel {
 
     public void reAdjustRegion() {
         Region region = getRegion();
-        region.setX(getClient().getWindow().getScaledWidth() - region.getWidth() - 5);
+        region.setX(HudApiMain.client.getWindow().getScaledWidth() - region.getWidth() - 5);
         setRegion(region);
     }
 
