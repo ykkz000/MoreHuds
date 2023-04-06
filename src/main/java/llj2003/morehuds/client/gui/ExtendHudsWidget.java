@@ -1,10 +1,10 @@
 package llj2003.morehuds.client.gui;
 
-import llj2003.hudapi.HudApiMain;
 import llj2003.hudapi.gui.widget.Panel;
 import llj2003.hudapi.util.Region;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.MinecraftClient;
 
 @Environment(EnvType.CLIENT)
 public class ExtendHudsWidget extends Panel {
@@ -24,7 +24,7 @@ public class ExtendHudsWidget extends Panel {
 
     public void reAdjustRegion() {
         Region region = getRegion();
-        region.setX(HudApiMain.client.getWindow().getScaledWidth() - region.getWidth() - 5);
+        region.setX(MinecraftClient.getInstance().getWindow().getScaledWidth() - region.getWidth() - 5);
         setRegion(region);
     }
 

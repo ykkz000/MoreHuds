@@ -1,6 +1,5 @@
 package llj2003.morehuds.client.gui;
 
-import llj2003.hudapi.HudApiMain;
 import llj2003.hudapi.gui.Color;
 import llj2003.hudapi.gui.widget.ProgressBar;
 import llj2003.hudapi.gui.widget.Label;
@@ -10,9 +9,9 @@ import llj2003.morehuds.client.util.lang.IdTranslator;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.text.Text;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -35,13 +34,13 @@ public class TargetInfoWidget extends Panel {
         add(healthInfoBar);
     }
     public void setTarget(HitResult hitResult) {
-        if (HudApiMain.client == null || HudApiMain.client.world == null) {
+        if (MinecraftClient.getInstance() == null || MinecraftClient.getInstance().world == null) {
             return;
         }
         switch (hitResult.getType()) {
             case BLOCK -> {
                 BlockHitResult blockHitResult = (BlockHitResult) hitResult;
-                Block block = HudApiMain.client.world.getBlockState(blockHitResult.getBlockPos()).getBlock();
+                Block block = MinecraftClient.getInstance().world.getBlockState(blockHitResult.getBlockPos()).getBlock();
                 nameLabel.setString(String.format("%s: %s",
                         IdTranslator.translateString("name"), block.getName().getString()));
                 healthInfoLabel.setVisible(false);
