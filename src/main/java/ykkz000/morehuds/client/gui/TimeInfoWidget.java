@@ -46,6 +46,6 @@ public class TimeInfoWidget extends Panel {
     }
 
     public static Region getPreferredRegion() {
-        return new Region(0, 120, 120, 31);
+        return new Region(0, 130, 120, 31);
     }
 }
