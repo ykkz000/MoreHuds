@@ -40,7 +40,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     //Hud API
-    modImplementation "llj2003.hudapi:hud-api:${project.hud_version}"
+    modImplementation "ykkz000.hudapi:hud-api:${project.hud_version}"
 }
 
 processResources {

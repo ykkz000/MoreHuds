@@ -1,11 +1,11 @@
-package llj2003.morehuds.client.gui;
+package ykkz000.morehuds.client.gui;
 
-import llj2003.hudapi.gui.Color;
-import llj2003.hudapi.gui.widget.ProgressBar;
-import llj2003.hudapi.gui.widget.Label;
-import llj2003.hudapi.gui.widget.Panel;
-import llj2003.hudapi.util.Region;
-import llj2003.morehuds.client.util.lang.IdTranslator;
+import ykkz000.hudapi.gui.Color;
+import ykkz000.hudapi.gui.widget.ProgressBar;
+import ykkz000.hudapi.gui.widget.Label;
+import ykkz000.hudapi.gui.widget.Panel;
+import ykkz000.hudapi.util.Region;
+import ykkz000.morehuds.client.util.lang.IdTranslator;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;

@@ -1,6 +1,6 @@
-package llj2003.morehuds.client.util.lang;
+package ykkz000.morehuds.client.util.lang;
 
-import llj2003.morehuds.client.MoreHudsClient;
+import ykkz000.morehuds.client.MoreHudsClient;
 import net.minecraft.text.Text;
 
 public class IdTranslator {

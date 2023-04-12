@@ -1,7 +1,7 @@
-package llj2003.morehuds.client;
+package ykkz000.morehuds.client;
 
-import llj2003.hudapi.HudApiMain;
-import llj2003.morehuds.client.gui.ExtendHudsWidget;
+import ykkz000.hudapi.HudApiMain;
+import ykkz000.morehuds.client.gui.ExtendHudsWidget;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

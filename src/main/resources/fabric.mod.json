@@ -5,17 +5,17 @@
   "name": "MoreHuds",
   "description": "Display more huds in Minecraft to show more information",
   "authors": [
-    "llj2003"
+    "ykkz000"
   ],
   "contact": {
-    "website": "https://gitee.com/llj2003/MoreHuds"
+    "website": "https://gitee.com/ykkz000/MoreHuds"
   },
   "license": "GPL-3.0",
   "icon": "assets/morehuds/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "llj2003.morehuds.client.MoreHudsClient"
+      "ykkz000.morehuds.client.MoreHudsClient"
     ]
   },
   "depends": {
