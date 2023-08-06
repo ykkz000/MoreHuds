@@ -1,6 +1,7 @@
 package ykkz000.morehuds.client;
 
 import ykkz000.hudapi.HudApiMain;
+import ykkz000.hudapi.gui.widget.Panel;
 import ykkz000.morehuds.client.gui.ExtendHudsWidget;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -23,9 +24,10 @@ public class MoreHudsClient implements ClientModInitializer {
                     InputUtil.Type.KEYSYM,
                     GLFW.GLFW_KEY_F4,
                     String.format("category.%s.base", MOD_ID)));
+    public static final Panel MAIN_FRAME = HudApiMain.allocateFrame();
     @Override
     public void onInitializeClient() {
-        HudApiMain.MAIN_PANEL.add(EXTEND_HUDS_WIDGET);
+        MAIN_FRAME.add(EXTEND_HUDS_WIDGET);
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client == null) {
                 LOGGER.info("client == null");
@@ -34,13 +36,14 @@ public class MoreHudsClient implements ClientModInitializer {
                 if (client.player == null) {
                     LOGGER.info("client.player == null");
                 } else {
-                    EXTEND_HUDS_WIDGET.armorInfoWidget.setArmorItems(client.player.getArmorItems());
+                    EXTEND_HUDS_WIDGET.playerInfoWidget.setPlayerPosition(client.player.getX(), client.player.getY(), client.player.getZ());
+                    EXTEND_HUDS_WIDGET.playerInfoWidget.setArmorItems(client.player.getArmorItems());
                 }
                 EXTEND_HUDS_WIDGET.reAdjustRegion();
             }
             if (KEY_BINDING_F4.wasPressed()) {
-                EXTEND_HUDS_WIDGET.setVisible(!EXTEND_HUDS_WIDGET.isVisible());
-                LOGGER.info("EXTEND_HUDS_WIDGET.isVisible() == " + EXTEND_HUDS_WIDGET.isVisible());
+                MAIN_FRAME.setVisible(!MAIN_FRAME.isVisible());
+                LOGGER.info("MAIN_FRAME.isVisible() == " + MAIN_FRAME.isVisible());
             }
         });
     }

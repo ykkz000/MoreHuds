@@ -1,5 +1,6 @@
 package ykkz000.morehuds.client.gui;
 
+import net.minecraft.client.gui.DrawContext;
 import ykkz000.hudapi.gui.Color;
 import ykkz000.hudapi.gui.widget.Label;
 import ykkz000.hudapi.gui.widget.Panel;
@@ -8,7 +9,6 @@ import ykkz000.morehuds.client.util.lang.IdTranslator;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.world.ClientWorld;
 
 import java.util.Date;
@@ -30,7 +30,7 @@ public class TimeInfoWidget extends Panel {
     }
 
     @Override
-    public void render(MatrixStack matrixStack) {
+    public void render(DrawContext drawContext) {
         if (MinecraftClient.getInstance() != null && MinecraftClient.getInstance().world != null) {
             ClientWorld clientWorld = MinecraftClient.getInstance().world;
             tickInfo.setString(String.format("%s: %d", IdTranslator.translateString("game_tick"), clientWorld.getTime()));
@@ -42,10 +42,10 @@ public class TimeInfoWidget extends Panel {
             realisticTimeInfo.setString(String.format("%s: %tT",
                     IdTranslator.translateString("time"), currentDate));
         }
-        super.render(matrixStack);
+        super.render(drawContext);
     }
 
     public static Region getPreferredRegion() {
-        return new Region(0, 130, 120, 31);
+        return new Region(0, 130, 150, 31);
     }
 }

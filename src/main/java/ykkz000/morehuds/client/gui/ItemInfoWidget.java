@@ -17,7 +17,7 @@ public class ItemInfoWidget extends Panel {
     public ItemInfoWidget(Region region) {
         super(region);
         itemDisplay = new ItemDisplay(new Region(0, 0, 16, 16), null);
-        bar = new ProgressBar(new Region(20, 5, 90, 5),
+        bar = new ProgressBar(new Region(20, 5, 120, 5),
                 Color.fromInt(0xFF16B900), Color.fromInt(0xFF073900), 1.0F);
         add(itemDisplay);
         add(bar);
@@ -37,6 +37,6 @@ public class ItemInfoWidget extends Panel {
     }
 
     public static Region getPreferredRegion() {
-        return new Region(0, 0, 110, 16);
+        return new Region(0, 0, 140, 16);
     }
 }

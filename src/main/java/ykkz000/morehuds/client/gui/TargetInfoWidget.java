@@ -25,7 +25,7 @@ public class TargetInfoWidget extends Panel {
         super(region, new Color(0.0F, 0.0F, 0.0F, 0.3F));
         nameLabel = new Label(new Region(5, 1, 60, 9), "没有目标");
         healthInfoLabel = new Label(new Region(5, 11, 60, 9), "");
-        healthInfoBar = new ProgressBar(new Region(5, 21, 110, 5),
+        healthInfoBar = new ProgressBar(new Region(5, 21, 140, 5),
                 Color.fromInt(0xFFB92A00), Color.fromInt(0xFF491000), 1.0F);
         healthInfoLabel.setVisible(false);
         healthInfoBar.setVisible(false);
@@ -71,6 +71,6 @@ public class TargetInfoWidget extends Panel {
         }
     }
     public static Region getPreferredRegion() {
-        return new Region(0, 0, 120, 30);
+        return new Region(0, 0, 150, 30);
     }
 }

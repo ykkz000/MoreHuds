@@ -9,16 +9,16 @@ import net.minecraft.client.MinecraftClient;
 @Environment(EnvType.CLIENT)
 public class ExtendHudsWidget extends Panel {
     public TargetInfoWidget targetInfoWidget;
-    public ArmorInfoWidget armorInfoWidget;
+    public PlayerInfoWidget playerInfoWidget;
     public TimeInfoWidget timeInfoWidget;
 
     public ExtendHudsWidget(Region region) {
         super(region);
         targetInfoWidget = new TargetInfoWidget(TargetInfoWidget.getPreferredRegion());
-        armorInfoWidget = new ArmorInfoWidget(ArmorInfoWidget.getPreferredRegion());
+        playerInfoWidget = new PlayerInfoWidget(PlayerInfoWidget.getPreferredRegion());
         timeInfoWidget = new TimeInfoWidget(TimeInfoWidget.getPreferredRegion());
         add(targetInfoWidget);
-        add(armorInfoWidget);
+        add(playerInfoWidget);
         add(timeInfoWidget);
     }
 
@@ -29,7 +29,6 @@ public class ExtendHudsWidget extends Panel {
     }
 
     public static Region getPreferredRegion() {
-        Region region = ItemInfoWidget.getPreferredRegion();
-        return new Region(0, 20, 120, 0);
+        return new Region(0, 20, 150, 0);
     }
 }
